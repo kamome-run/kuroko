@@ -45,6 +45,25 @@ To check if the environment is configured correctly:
 ./kuroko doctor
 ```
 
+## Uninstallation
+
+To remove Kuroko, follow these steps:
+
+1. Remove the following lines added by Kuroko from your `.bashrc`:
+   ```bash
+   export GTK_IM_MODULE=fcitx
+   export QT_IM_MODULE=fcitx
+   export XMODIFIERS=@im=fcitx
+   ```
+2. Remove the `kuroko` directory:
+   ```bash
+   rm -rf kuroko
+   ```
+3. (Optional) Remove the installed packages if they are no longer needed:
+   ```bash
+   sudo apt remove fcitx fcitx-mozc fonts-noto-cjk
+   ```
+
 ## Support
 If you need help or find a bug, please report it on GitHub Issues.
 

@@ -45,6 +45,25 @@ IMEサポート付きでアプリケーション（VS Code, Antigravity, Cursor�
 ./kuroko doctor
 ```
 
+## アンインストール
+
+Kurokoを削除するには、以下の手順を行ってください。
+
+1. `.bashrc` からKurokoが追加した以下の行を削除します。
+   ```bash
+   export GTK_IM_MODULE=fcitx
+   export QT_IM_MODULE=fcitx
+   export XMODIFIERS=@im=fcitx
+   ```
+2. `kuroko` ディレクトリを削除します。
+   ```bash
+   rm -rf kuroko
+   ```
+3. (オプション) インストールされたパッケージが不要な場合は削除します。
+   ```bash
+   sudo apt remove fcitx fcitx-mozc fonts-noto-cjk
+   ```
+
 ## サポート
 ヘルプが必要な場合やバグを見つけた場合は、GitHubのIssueで報告してください。
 
