@@ -1,0 +1,137 @@
+#!/bin/bash
+
+set -e
+
+# Constants
+RC_FILE="$HOME/.bashrc"
+BACKUP_RC_FILE="$HOME/.bashrc.bak"
+
+# Colors
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
+
+log_info() {
+    echo -e "${GREEN}[INFO]${NC} $1"
+}
+
+log_warn() {
+    echo -e "${YELLOW}[WARN]${NC} $1"
+}
+
+log_error() {
+    echo -e "${RED}[ERROR]${NC} $1"
+}
+
+function install_packages() {
+    log_info "Checking and installing required packages..."
+    sudo apt update
+    sudo apt install -y fcitx fcitx-mozc fonts-noto-cjk
+}
+
+function configure_environment() {
+    log_info "Configuring environment variables in $RC_FILE..."
+
+    # Backup
+    if [ -f "$RC_FILE" ]; then
+        cp "$RC_FILE" "$BACKUP_RC_FILE"
+        log_info "Backup created at $BACKUP_RC_FILE"
+    fi
+
+    # Append variables if not present
+    local vars=(
+        "export GTK_IM_MODULE=fcitx"
+        "export QT_IM_MODULE=fcitx"
+        "export XMODIFIERS=@im=fcitx"
+    )
+
+    for var in "${vars[@]}"; do
+        if ! grep -qF "$var" "$RC_FILE"; then
+            echo "$var" >> "$RC_FILE"
+            log_info "Added: $var"
+        else
+            log_info "Already exists: $var"
+        fi
+    done
+}
+
+function setup() {
+    log_info "Starting Kuroko Setup..."
+    install_packages
+    configure_environment
+    log_info "Setup completed successfully! Please restart your shell or run 'source $RC_FILE'."
+}
+
+function launch() {
+    if [ -z "$1" ]; then
+        log_error "Usage: kuroko launch <command> [args...]"
+        exit 1
+    fi
+
+    local cmd="$1"
+    shift
+
+    log_info "Launching $cmd with IME environment variables..."
+    export GTK_IM_MODULE=fcitx
+    export QT_IM_MODULE=fcitx
+    export XMODIFIERS=@im=fcitx
+
+    exec "$cmd" "$@"
+}
+
+function doctor() {
+    log_info "Starting Kuroko Doctor..."
+    local issues=0
+
+    # Check Fcitx process
+    if pgrep -x "fcitx" > /dev/null; then
+        log_info "[OK] Fcitx daemon is running."
+    else
+        log_error "[FAIL] Fcitx daemon is NOT running."
+        issues=$((issues + 1))
+    fi
+
+    # Check Environment Variables
+    local vars=("GTK_IM_MODULE" "QT_IM_MODULE" "XMODIFIERS")
+    for var in "${vars[@]}"; do
+        if [[ "${!var}" == "fcitx" || "${!var}" == "@im=fcitx" ]]; then
+             log_info "[OK] $var is set to ${!var}."
+        else
+             log_error "[FAIL] $var is NOT set correctly (Current: '${!var}')."
+             issues=$((issues + 1))
+        fi
+    done
+
+    if [ $issues -eq 0 ]; then
+        log_info "No issues found. Your environment looks good!"
+    else
+        log_warn "Found $issues issue(s). Please run 'kuroko setup' or restart your shell."
+        exit 1
+    fi
+}
+
+function usage() {
+    echo "Usage: $0 {setup|launch|doctor}"
+    echo "  setup   : Install dependencies and configure environment."
+    echo "  launch  : Launch an application with IME configuration."
+    echo "  doctor  : Diagnose environment issues."
+}
+
+# Main dispatch
+case "$1" in
+    setup)
+        setup
+        ;;
+    launch)
+        shift
+        launch "$@"
+        ;;
+    doctor)
+        doctor
+        ;;
+    *)
+        usage
+        exit 1
+        ;;
+esac

@@ -1,0 +1,41 @@
+name: Bug Report 🐞
+description: File a bug report (English or Japanese)
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+        
+        **Languages:**
+        - 🇺🇸 **English:** Highly recommended.
+        - 🇯🇵 **Japanese:** Welcome.
+        - 🇨🇳 🇰🇷 **Chinese / Korean:** Welcome, but **please include an English translation** (DeepL/Google Translate is okay).
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem Description (不具合の内容)
+      description: Describe what happened.
+      placeholder: |
+        Example: When I type "kuroko setup", it shows an error...
+        (例：セットアップを実行したところ、以下のエラーが出ました...)
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment (環境)
+      description: OS version, Device, etc.
+      placeholder: ChromeOS 119, Pixelbook Go, Kuroko v0.1.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log Output (ログ出力)
+      description: Please paste the output of `kuroko doctor` or error logs.
+      render: shell
