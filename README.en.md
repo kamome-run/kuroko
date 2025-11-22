@@ -1,0 +1,52 @@
+# Kuroko: Crostini Development Environment Optimizer
+
+Kuroko is a CLI tool that solves Japanese input issues in the ChromeOS (Crostini) environment and automates the setup of the development environment. It specifically focuses on resolving the issue where Electron-based apps (VS Code, Antigravity, etc.) cannot communicate correctly with the IME (Fcitx-Mozc) due to missing GTK/Qt bridges.
+
+## Features
+
+- **Auto Setup**: Installs necessary packages (`fcitx`, `fcitx-mozc`, `fonts-noto-cjk`) and configures environment variables (`GTK_IM_MODULE`, `QT_IM_MODULE`, `XMODIFIERS`) in shell configuration files.
+- **Application Launcher**: Provides a wrapper function to launch applications with the correct IME environment variables enforced, ensuring Japanese input works.
+- **Diagnostic Tool**: The `doctor` command checks the status of the Fcitx daemon and environment variable configurations.
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd kuroko
+   ```
+2. Run the setup command:
+   ```bash
+   ./kuroko setup
+   ```
+3. Restart your shell or run `source ~/.bashrc`.
+
+## Usage
+
+### Environment Setup
+```bash
+./kuroko setup
+```
+
+### Launching Applications
+To launch applications (VS Code, Antigravity, Cursor, etc.) with IME support:
+```bash
+./kuroko launch <application-name>
+
+# Examples
+./kuroko launch code        # VS Code
+./kuroko launch antigravity # Antigravity
+./kuroko launch cursor      # Cursor
+```
+
+### Diagnostics
+To check if the environment is configured correctly:
+```bash
+./kuroko doctor
+```
+
+## Support
+If you need help or find a bug, please report it on GitHub Issues.
+
+## License
+This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
