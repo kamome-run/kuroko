@@ -13,7 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `launch` command: Wraps application execution to ensure correct IME environment variables are loaded. Supports VS Code, Antigravity, Cursor, etc.
   - `doctor` command: Diagnoses the system for correct Fcitx daemon status and environment variable configuration.
 - **Documentation**:
-  - README files (English and Japanese).
+  - README files (English, Japanese, Chinese, Korean, Traditional Chinese).
+  - Added navigation badges to README files.
+  - Created contribution guidelines (`CONTRIBUTING.md`) in multiple languages.
+  - Added Contributing section to READMEs.
   - Added uninstallation instructions.
 - **License**:
   - GNU General Public License v3.0 (GPLv3).

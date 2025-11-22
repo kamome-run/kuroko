@@ -1,5 +1,12 @@
 # Kuroko: Crostini 開発環境最適化ツール
 
+**Kuroko** is a CLI tool to automatically fix Japanese IME issues on ChromeOS (Crostini) for VS Code and Electron apps.
+
+[![English](https://img.shields.io/badge/lang-English-blue.svg)](README.en.md)
+[![Chinese](https://img.shields.io/badge/lang-中文-red.svg)](README.zh.md)
+[![Korean](https://img.shields.io/badge/lang-한국어-green.svg)](README.ko.md)
+[![Traditional Chinese](https://img.shields.io/badge/lang-繁體中文_🇹🇼-blue.svg)](README.zh-TW.md)
+
 Kurokoは、ChromeOS (Crostini) 環境における日本語入力の課題を解決し、開発環境のセットアップを自動化するCLIツールです。特に、Electron製アプリ（VS Code, Antigravity等）がIME（Fcitx-Mozc）と正しく通信できない問題（GTK/Qtブリッジの欠如）を解決することを主眼としています。
 
 ## 機能
@@ -66,6 +73,9 @@ Kurokoを削除するには、以下の手順を行ってください。
 
 ## サポート
 ヘルプが必要な場合やバグを見つけた場合は、GitHubのIssueで報告してください。
+
+## 貢献
+詳細な貢献ガイドラインについては [CONTRIBUTING.md](CONTRIBUTING.md) を参照してください。
 
 ## ライセンス
 本プロジェクトは GNU General Public License v3.0 の下でライセンスされています。詳細は [LICENSE](LICENSE) ファイルを参照してください。
