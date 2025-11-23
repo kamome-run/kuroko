@@ -5,6 +5,12 @@
 フォーマットは [Keep a Changelog](https://keepachangelog.com/ja/1.0.0/) に基づいており、
 このプロジェクトは [Semantic Versioning](https://semver.org/lang/ja/spec/v2.0.0.html) に準拠しています。
 
+## [0.1.1] - 2025-11-23
+
+### 追加
+- **CLIツール (`kuroko`)**:
+  - `setup` コマンド: `fcitx` プロファイルの自動設定（`mozc` の有効化）を追加しました。
+
 ## [0.1.0] - 2025-11-22
 
 ### 追加

@@ -5,6 +5,12 @@
 형식은 [Keep a Changelog](https://keepachangelog.com/ko/1.0.0/)을 기반으로 하며,
 이 프로젝트는 [Semantic Versioning](https://semver.org/lang/ko/spec/v2.0.0.html)을 준수합니다.
 
+## [0.1.1] - 2025-11-23
+
+### 추가됨
+- **CLI 도구 (`kuroko`)**:
+  - `setup` 명령: 자동 `fcitx` 프로필 구성(`mozc` 활성화)을 추가했습니다.
+
 ## [0.1.0] - 2025-11-22
 
 ### 추가됨
