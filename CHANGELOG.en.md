@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - **CLI Tool (`kuroko`)**:
   - `setup` command: Added automatic `fcitx` profile configuration (enabling `mozc`).
+- **Documentation**:
+  - Added flag emojis to language links in README and CONTRIBUTING files.
 
 ## [0.1.0] - 2025-11-22
 
