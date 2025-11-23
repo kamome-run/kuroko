@@ -1,6 +1,6 @@
 # Contribution Guidelines
 
-[![Japanese](https://img.shields.io/badge/lang-日本語-white.svg)](CONTRIBUTING.md) [![Chinese](https://img.shields.io/badge/lang-中文-red.svg)](CONTRIBUTING.zh.md) [![Korean](https://img.shields.io/badge/lang-한국어-green.svg)](CONTRIBUTING.ko.md) [![Traditional Chinese](https://img.shields.io/badge/lang-繁體中文_🇹🇼-blue.svg)](CONTRIBUTING.zh-TW.md)
+[![Japanese](https://img.shields.io/badge/lang-🇯🇵_日本語-white.svg)](CONTRIBUTING.md) [![Chinese](https://img.shields.io/badge/lang-🇨🇳_中文-red.svg)](CONTRIBUTING.zh.md) [![Korean](https://img.shields.io/badge/lang-🇰🇷_한국어-green.svg)](CONTRIBUTING.ko.md) [![Traditional Chinese](https://img.shields.io/badge/lang-🇹🇼_繁體中文-blue.svg)](CONTRIBUTING.zh-TW.md)
 
 Thank you for your interest in contributing to the Kuroko project!
 We welcome contributions in all forms, including bug reports, feature suggestions, and pull requests.

@@ -2,10 +2,10 @@
 
 **Kuroko** is a CLI tool to automatically fix Japanese IME issues on ChromeOS (Crostini) for VS Code and Electron apps.
 
-[![English](https://img.shields.io/badge/lang-English-blue.svg)](README.en.md)
-[![Chinese](https://img.shields.io/badge/lang-中文-red.svg)](README.zh.md)
-[![Korean](https://img.shields.io/badge/lang-한국어-green.svg)](README.ko.md)
-[![Traditional Chinese](https://img.shields.io/badge/lang-繁體中文_🇹🇼-blue.svg)](README.zh-TW.md)
+[![English](https://img.shields.io/badge/lang-🇺🇸_English-blue.svg)](README.en.md)
+[![Chinese](https://img.shields.io/badge/lang-🇨🇳_中文-red.svg)](README.zh.md)
+[![Korean](https://img.shields.io/badge/lang-🇰🇷_한국어-green.svg)](README.ko.md)
+[![Traditional Chinese](https://img.shields.io/badge/lang-🇹🇼_繁體中文-blue.svg)](README.zh-TW.md)
 
 Kurokoは、ChromeOS (Crostini) 環境における日本語入力の課題を解決し、開発環境のセットアップを自動化するCLIツールです。特に、Electron製アプリ（VS Code, Antigravity等）がIME（Fcitx-Mozc）と正しく通信できない問題（GTK/Qtブリッジの欠如）を解決することを主眼としています。
 
@@ -19,7 +19,7 @@ Kurokoは、ChromeOS (Crostini) 環境における日本語入力の課題を解
 
 1. リポジトリをクローンします:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/kamome-run/kuroko.git
    cd kuroko
    ```
 2. セットアップコマンドを実行します:
