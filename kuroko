@@ -56,10 +56,38 @@ function configure_environment() {
     done
 }
 
+function configure_fcitx() {
+    log_info "Configuring Fcitx profile..."
+
+    # Ensure fcitx is running to generate config if needed
+    if [ ! -f "$HOME/.config/fcitx/profile" ]; then
+        log_info "Fcitx profile not found. Starting fcitx to generate it..."
+        fcitx -d > /dev/null 2>&1
+        sleep 2 # Wait for config generation
+    fi
+
+    # Restart fcitx to ensure we can modify config safely
+    pkill fcitx || true
+    sleep 1
+
+    if [ -f "$HOME/.config/fcitx/profile" ]; then
+        # Add mozc to EnabledIMList if not already present or just force the replacement as requested
+        # The user's request was specific: replace 'EnabledIMList=fcitx-keyboard-us:True' with 'EnabledIMList=fcitx-keyboard-us:True,mozc:True'
+        sed -i 's/EnabledIMList=fcitx-keyboard-us:True/EnabledIMList=fcitx-keyboard-us:True,mozc:True/g' ~/.config/fcitx/profile
+        log_info "Enabled mozc in fcitx profile."
+    else
+        log_warn "Fcitx profile still not found. Skipping mozc configuration."
+    fi
+
+    # Restart fcitx to apply changes
+    fcitx -d -r > /dev/null 2>&1
+}
+
 function setup() {
     log_info "Starting Kuroko Setup..."
     install_packages
     configure_environment
+    configure_fcitx
     log_info "Setup completed successfully! Please restart your shell or run 'source $RC_FILE'."
 }
 
@@ -135,3 +163,9 @@ case "$1" in
         exit 1
         ;;
 esac
+
+# fcitx daemon start
+if ! pgrep -x "fcitx" > /dev/null; then
+    echo "Starting fcitx daemon..."
+    fcitx -d > /dev/null 2>&1
+fi

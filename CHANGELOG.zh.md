@@ -5,6 +5,14 @@
 格式基于 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.0.0/)，
 并且本项目遵守 [Semantic Versioning](https://semver.org/lang/zh-CN/spec/v2.0.0.html)。
 
+## [0.1.1] - 2025-11-23
+
+### 新增
+- **CLI 工具 (`kuroko`)**:
+  - `setup` 命令: 添加了自动 `fcitx` 配置文件配置（启用 `mozc`）。
+- **文档**:
+  - 在 README 和 CONTRIBUTING 文件的语言链接中添加了国旗表情符号。
+
 ## [0.1.0] - 2025-11-22
 
 ### 新增

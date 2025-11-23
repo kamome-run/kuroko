@@ -1,6 +1,6 @@
 # Kuroko: Crostini 開發環境優化工具
 
-[![Japanese](https://img.shields.io/badge/lang-日本語-white.svg)](README.md) [![English](https://img.shields.io/badge/lang-English-blue.svg)](README.en.md) [![Chinese](https://img.shields.io/badge/lang-中文-red.svg)](README.zh.md) [![Korean](https://img.shields.io/badge/lang-한국어-green.svg)](README.ko.md)
+[![Japanese](https://img.shields.io/badge/lang-🇯🇵_日本語-white.svg)](README.md) [![English](https://img.shields.io/badge/lang-🇺🇸_English-blue.svg)](README.en.md) [![Chinese](https://img.shields.io/badge/lang-🇨🇳_中文-red.svg)](README.zh.md) [![Korean](https://img.shields.io/badge/lang-🇰🇷_한국어-green.svg)](README.ko.md)
 
 Kuroko 是一個 CLI 工具，旨在解決 ChromeOS (Crostini) 環境中的日語輸入問題，並自動化開發環境的設置。它特別專注於解決基於 Electron 的應用程式（如 VS Code, Antigravity 等）由於缺少 GTK/Qt 橋接而無法與 IME (Fcitx-Mozc) 正確通信的問題。
 
