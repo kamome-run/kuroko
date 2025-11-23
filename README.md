@@ -19,7 +19,7 @@ Kurokoは、ChromeOS (Crostini) 環境における日本語入力の課題を解
 
 1. リポジトリをクローンします:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/kamome-run/kuroko.git
    cd kuroko
    ```
 2. セットアップコマンドを実行します:
