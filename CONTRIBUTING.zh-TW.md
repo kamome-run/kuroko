@@ -1,6 +1,6 @@
 # 貢獻指南
 
-[![Japanese](https://img.shields.io/badge/lang-日本語-white.svg)](CONTRIBUTING.md) [![English](https://img.shields.io/badge/lang-English-blue.svg)](CONTRIBUTING.en.md) [![Chinese](https://img.shields.io/badge/lang-中文-red.svg)](CONTRIBUTING.zh.md) [![Korean](https://img.shields.io/badge/lang-한국어-green.svg)](CONTRIBUTING.ko.md)
+[![Japanese](https://img.shields.io/badge/lang-🇯🇵_日本語-white.svg)](CONTRIBUTING.md) [![English](https://img.shields.io/badge/lang-🇺🇸_English-blue.svg)](CONTRIBUTING.en.md) [![Chinese](https://img.shields.io/badge/lang-🇨🇳_中文-red.svg)](CONTRIBUTING.zh.md) [![Korean](https://img.shields.io/badge/lang-🇰🇷_한국어-green.svg)](CONTRIBUTING.ko.md)
 
 感謝您有興趣為 Kuroko 專案做出貢獻！
 我們歡迎各種形式的貢獻，包括錯誤報告、功能建議和拉取請求 (Pull Requests)。

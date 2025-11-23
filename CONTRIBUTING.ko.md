@@ -1,6 +1,6 @@
 # 기여 가이드라인
 
-[![Japanese](https://img.shields.io/badge/lang-日本語-white.svg)](CONTRIBUTING.md) [![English](https://img.shields.io/badge/lang-English-blue.svg)](CONTRIBUTING.en.md) [![Chinese](https://img.shields.io/badge/lang-中文-red.svg)](CONTRIBUTING.zh.md) [![Traditional Chinese](https://img.shields.io/badge/lang-繁體中文_🇹🇼-blue.svg)](CONTRIBUTING.zh-TW.md)
+[![Japanese](https://img.shields.io/badge/lang-🇯🇵_日本語-white.svg)](CONTRIBUTING.md) [![English](https://img.shields.io/badge/lang-🇺🇸_English-blue.svg)](CONTRIBUTING.en.md) [![Chinese](https://img.shields.io/badge/lang-🇨🇳_中文-red.svg)](CONTRIBUTING.zh.md) [![Traditional Chinese](https://img.shields.io/badge/lang-🇹🇼_繁體中文-blue.svg)](CONTRIBUTING.zh-TW.md)
 
 Kuroko 프로젝트에 기여해 주셔서 감사합니다!
 버그 보고, 기능 제안, 풀 리퀘스트(Pull Request) 등 모든 형태의 기여를 환영합니다.
